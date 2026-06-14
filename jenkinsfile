@@ -1,11 +1,23 @@
 pipeline {
     agent any
+
     stages {
         stage('Checkout') {
-            steps { echo 'Checkout done' }
+            steps {
+                echo 'Checking out simple-card project'
+            }
         }
+
+        stage('Build') {
+            steps {
+                echo 'No build required for static HTML project'
+            }
+        }
+
         stage('Deploy') {
-            steps { echo 'Simple HTML deployed' }
+            steps {
+                echo 'Deployment simulated (GitHub Pages handles actual hosting)'
+            }
         }
     }
 }
